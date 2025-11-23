@@ -1,3 +1,4 @@
+<!-- ./components/MainTop.vue -->
 <template>
     <div class="outline-MainTop">
         <div class="text-section">
