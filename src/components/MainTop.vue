@@ -7,9 +7,8 @@
             <span id="sub2sub" :class="{ moveDown: isActive }">*die funktionieren</span>
         </div>
         <div class="img-section">
-            <div class="img-info-back">
-                <img src="../assets/Portfoliomain.jpg" width="450px"/>
-            </div>
+            <div class="img-info-back" :class="{ openInfos: isActiveInfo }"></div>
+            <img :class="{ openImg: isActiveInfo }" @mouseover="toggleInfos" src="../assets/Portfoliomain.jpg" width="450px"/>
         </div>
     </div>
 </template>
@@ -18,6 +17,11 @@
 import { onMounted, ref } from 'vue'
 
 const isActive = ref(false);
+const isActiveInfo = ref(false);
+
+function toggleInfos() {
+    isActiveInfo.value = !isActiveInfo.value
+}
 
 onMounted(() => {
   setTimeout(() => {
@@ -115,24 +119,35 @@ onMounted(() => {
 .img-section {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-right: 100px;
     grid-row: 2;
     grid-column: 2 / 4;
     width: 100%;
     height: 100%;
-
+    position: relative;
+    
     .img-info-back {
-        position: relative;  
-        width: 450px;        
-        height: 300px;      
+        position: absolute;
+        width: 300px; // Anpassen
+        height: 500px; 
         background-color: white;
         border-radius: 30px;
+        left: 72%;
+        transform: translateX(-50%) translateX(-30px);  
+        z-index: 1;
+        will-change: width, height; // height hinzufügen
+        transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
+    
     img {
+        width: 450px;
         border-radius: 30px;
+        z-index: 2;
+        position: relative;
 
-        //transform: translateX(150px);
+        will-change: width, height; // height hinzufügen
+        transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
@@ -145,6 +160,19 @@ onMounted(() => {
 .moveDown {
     top: 700px !important;  // 170px + 520px + 10px (Anpassen nach Bedarf)
     transition: top 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.openInfos {
+    left: 65%!important;
+    width: 600px !important;
+    height: 700px!important;
+    transition: all .5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.openImg {
+    width: 300px!important;
+
+    box-shadow: 0px 0px 20px black;
 }
 
 </style>
