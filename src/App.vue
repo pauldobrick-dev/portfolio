@@ -3,7 +3,7 @@
     <Hero @open-contact="openContact" />
   </div>
 
-  <div class="next-section-wrp" id="projects">
+  <div class="next-section-wrp projects-wrp" id="projects">
     <Projects @open-contact="openContact" />
   </div>
   <div class="next-section-wrp packages-wrp" id="packages">
@@ -122,6 +122,14 @@ body {
   }
 
   .next-section-wrp {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-wrp {
     height: auto;
     min-height: 100vh;
     overflow: visible;

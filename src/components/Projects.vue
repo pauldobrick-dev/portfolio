@@ -921,7 +921,7 @@ $text-muted: #666;
 }
 
 /* ══════════════ MOBILE ══════════════ */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .projects-section {
     flex-direction: column;
     height: auto;
