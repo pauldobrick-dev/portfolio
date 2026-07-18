@@ -90,7 +90,8 @@ body {
 }
 
 .next-section-wrp {
-  height: 100vh;
+  height: 100vh; /* Fallback für ältere Browser */
+  height: 100dvh; /* Berücksichtigt die Browser-Adressleiste auf Mobile/Tablet */
   width: 100%;
   scroll-snap-align: start;
   position: relative;
