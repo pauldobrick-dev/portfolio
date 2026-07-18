@@ -181,6 +181,9 @@ import stockpilePlakat from '@/assets/doc/StockpilePlakat.pdf'
 import stockpileBericht from '@/assets/doc/StockpileBericht.pdf'
 import stockpileZeugnis from '@/assets/doc/StockpileZeugnis.pdf'
 
+import shhWholeVid from '@/assets/img/Shh.bar/ShhWholeWebNew.mp4'
+import shhmobileResp from '@/assets/img/Shh.bar/MobileResponsive.jpg'
+
 // TODO: Screenshots (oder kurze Videos!) von der shh.-Demo hier ablegen
 // (z.B. /assets/img/Shh/) und die Imports unten aktivieren.
 // Bilder: .jpeg/.png/.webp — normale Screenshots (ca. 1200x800px reicht).
@@ -218,7 +221,7 @@ const projects = [
     subtitle: 'Konzept-Website für eine Wiener Listening Bar (Eigeninitiative)',
     description: 'Unaufgefordert entwickeltes Website-Konzept für eine Wiener Listening Bar — von der Recherche über das Design bis zur live geschalteten Demo. Kernstück ist eine Event-Übersicht, die der Betrieb komplett selbst über ein einfaches Google Sheet pflegen könnte, ganz ohne Programmierkenntnisse oder Login-Bereich.',
     // Sobald Screenshots vorhanden sind: [shhImg1, shhImg2, shhImg3]
-    screenshots: [null, null, null],
+    screenshots: [shhWholeVid, shhmobileResp],
     techLabel: 'TECH STACK',
     techMode: 'skills',
     skills: [
@@ -331,8 +334,7 @@ $text-muted: #666;
 .projects-section {
   display: flex;
   width: 100%;
-  height: 100vh; /* Fallback für ältere Browser */
-  height: 100dvh; /* Berücksichtigt die Browser-Adressleiste auf Mobile/Tablet */
+  height: 100vh;
   overflow: hidden;
   background-color: $dark;
   font-family: 'Dogica Pixel', monospace;
