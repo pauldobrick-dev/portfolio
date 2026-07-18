@@ -101,7 +101,7 @@ const description = `Ich baue individuelle Websites für Unternehmen in Wien —
 
 const sideBlocks = [
   { label: '// STANDORT', value: 'Wien, AT' },
-  { label: '// ANTWORT', value: '< 24h' },
+  { label: '// ERFAHRUNG', value: '3+ Jahre' },
   { label: '// VERFÜGBAR', value: 'Ab sofort' },
 ];
 
@@ -474,7 +474,7 @@ $card-h: 520px;
 }
 
 /* ══════════════ MOBILE ══════════════ */
-@media (max-width: 860px) {
+@media (max-width: 768px) {
   .about-section {
     flex-direction: column;
     gap: 40px;

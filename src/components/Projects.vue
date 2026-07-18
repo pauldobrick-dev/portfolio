@@ -156,6 +156,11 @@
                   <span class="bullet">▸</span>{{ point }}
                 </li>
               </ul>
+
+              <a v-if="active.link" :href="active.link" target="_blank" class="project-link">
+                <span>PROJEKT ANSEHEN</span>
+                <span class="link-arrow">→</span>
+              </a>
             </div>
 
           </div>
@@ -175,9 +180,6 @@ import stockpileImg3 from '@/assets/img/Stockpile/Login_screen.jpeg'
 import stockpilePlakat from '@/assets/doc/StockpilePlakat.pdf'
 import stockpileBericht from '@/assets/doc/StockpileBericht.pdf'
 import stockpileZeugnis from '@/assets/doc/StockpileZeugnis.pdf'
-
-import shhWholevid from '@/assets/img/Shh.bar/ShhWholeWebNew.mp4'
-import shhMobileResponsive from '@/assets/img/Shh.bar/MobileResponsive.jpg'
 
 // TODO: Screenshots (oder kurze Videos!) von der shh.-Demo hier ablegen
 // (z.B. /assets/img/Shh/) und die Imports unten aktivieren.
@@ -216,14 +218,14 @@ const projects = [
     subtitle: 'Konzept-Website für eine Wiener Listening Bar (Eigeninitiative)',
     description: 'Unaufgefordert entwickeltes Website-Konzept für eine Wiener Listening Bar — von der Recherche über das Design bis zur live geschalteten Demo. Kernstück ist eine Event-Übersicht, die der Betrieb komplett selbst über ein einfaches Google Sheet pflegen könnte, ganz ohne Programmierkenntnisse oder Login-Bereich.',
     // Sobald Screenshots vorhanden sind: [shhImg1, shhImg2, shhImg3]
-    screenshots: [shhWholevid, shhMobileResponsive],
+    screenshots: [null, null, null],
     techLabel: 'TECH STACK',
     techMode: 'skills',
     skills: [
-      { name: 'HTML / CSS / JS', level: 90 },
+      { name: 'HTML/CSS/JS', level: 90 },
       { name: 'Design System', level: 85 },
       { name: 'Google Sheets API', level: 75 },
-      { name: 'Hosting / Deploy', level: 80 },
+      { name: 'Hosting/Deploy', level: 80 },
     ],
     highlights: [
       'Individuelles Design, abgestimmt auf bestehende Marke & Bildsprache (Farben, Typografie, Fotomaterial)',
@@ -255,6 +257,7 @@ const projects = [
       'Die Oberfläche wurde für mobile Zebra-Scanner und den Desktop getrennt optimiert',
       'LDAP-Sicherung und Anbindung an das Windows AD wurden berücksichtigt',
     ],
+    link: '#',
   },
   {
     id: 'cta',
@@ -918,7 +921,7 @@ $text-muted: #666;
 }
 
 /* ══════════════ MOBILE ══════════════ */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .projects-section {
     flex-direction: column;
     height: auto;
