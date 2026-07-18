@@ -681,6 +681,14 @@ $white: #f5f5f5;
     padding: 18px 20px;
   }
 
+  .nav-links {
+    display: none;
+  }
+
+  .nav-contact {
+    display: none;
+  }
+
   .hero-content {
     flex-direction: column-reverse;
     padding: 32px 24px 24px;

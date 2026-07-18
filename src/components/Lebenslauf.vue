@@ -152,6 +152,7 @@ $text-muted: #555;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 60px 0 100px;
   box-sizing: border-box;
   overflow: hidden;

@@ -156,11 +156,6 @@
                   <span class="bullet">▸</span>{{ point }}
                 </li>
               </ul>
-
-              <a v-if="active.link" :href="active.link" target="_blank" class="project-link">
-                <span>PROJEKT ANSEHEN</span>
-                <span class="link-arrow">→</span>
-              </a>
             </div>
 
           </div>
@@ -225,10 +220,10 @@ const projects = [
     techLabel: 'TECH STACK',
     techMode: 'skills',
     skills: [
-      { name: 'HTML/CSS/JS', level: 90 },
+      { name: 'HTML / CSS / JS', level: 90 },
       { name: 'Design System', level: 85 },
       { name: 'Google Sheets API', level: 75 },
-      { name: 'Hosting/Deploy', level: 80 },
+      { name: 'Hosting / Deploy', level: 80 },
     ],
     highlights: [
       'Individuelles Design, abgestimmt auf bestehende Marke & Bildsprache (Farben, Typografie, Fotomaterial)',
@@ -260,7 +255,6 @@ const projects = [
       'Die Oberfläche wurde für mobile Zebra-Scanner und den Desktop getrennt optimiert',
       'LDAP-Sicherung und Anbindung an das Windows AD wurden berücksichtigt',
     ],
-    link: '#',
   },
   {
     id: 'cta',
