@@ -104,7 +104,7 @@ const packages = [
   {
     id: 'business',
     name: 'Business-Website',
-    price: '1.200 €',
+    price: '2000 €',
     pricePrefix: 'ab',
     subtitle: 'Mit eigenem, wachsendem Backend',
     features: [
