@@ -88,7 +88,7 @@ const packages = [
   {
     id: 'starter',
     name: 'Starter-Website',
-    price: '500 €',
+    price: '800 €',
     pricePrefix: 'ab',
     subtitle: 'Für den professionellen Auftritt',
     features: [
